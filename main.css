@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f3f3;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: black;
+    padding: 16px 0;
+    color: white;
+    margin-bottom: 56px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu > li {
+    margin-left: 24px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 64px;
+}
+
+.sobre-a-loja {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; 
+    align-items: center;
+    gap: 40px;
+    margin-top: 24px;
+}
+
+.sobre-a-loja img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.sobre-a-loja p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.produtos {
+    padding: 32px 16px;
+}
+
+.produtos h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 32px;
+    color: black;
+    border-bottom: 2px solid gray;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.lista-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.produto {
+    width: 23%;
+    background-color: white;
+    padding: 16px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+}
+
+.produto img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.produto h3 {
+    font-size: 1.2rem;
+    margin: 12px 0 8px;
+}
+
+.produto p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.botao-produto button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background-color 0.3s;
+}
+
+.botao-produto button:hover {
+    background-color: darkgray;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .container {
+        max-width: 90%;
+    }
+    
+    .produto {
+        width: 48%;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .conteudo {
+        display: block;
+    }
+
+    .sobre-a-loja {
+        display: block;
+        text-align: center;
+    }
+
+    .sobre-a-loja img {
+        margin: 0 auto 16px auto;
+        display: block;
+    }
+
+    .lista-produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 100%;
+    }
+}
